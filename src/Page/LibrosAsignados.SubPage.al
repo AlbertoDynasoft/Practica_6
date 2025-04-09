@@ -26,10 +26,6 @@ page 50108 "AMM Libros Asignados SubPage"
                 {
                     
                 }
-                field(Test;Rec.Test)
-                {
-                   
-                }
             }
         }
     }

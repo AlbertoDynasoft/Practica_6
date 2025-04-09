@@ -1,10 +1,10 @@
-table 50107 "AMM Test"
+table 50107 "AMM Test Cambiado"
 {
     DataClassification = ToBeClassified;
     
     fields
     {
-        field(1; IdTest; Integer)
+        field(1; IdTestt; Integer)
         {
             DataClassification = ToBeClassified;
         }
@@ -16,7 +16,7 @@ table 50107 "AMM Test"
     
     keys
     {
-        key(PK; IdTest)
+        key(PK; IdTestt)
         {
             Clustered = true;
         }

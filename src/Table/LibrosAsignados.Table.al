@@ -39,10 +39,6 @@ table 50106 "AMM Libros Asignados"
         {
             DataClassification = ToBeClassified;
         }
-        field(5; Test; Code[10])
-        {
-            DataClassification = ToBeClassified;
-        }
     }
     
     keys

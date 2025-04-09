@@ -28,10 +28,6 @@ page 50110 "AMM Libros Asignados Card"
                 {
                     
                 }
-                field(Test;Rec.Test)
-                {
-                    
-                }
             }
         }
     }

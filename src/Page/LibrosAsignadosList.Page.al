@@ -44,10 +44,6 @@ page 50109 "AMM Libros Asignados List"
                 {
                     
                 }
-                field(Test;Rec.Test)
-                {
-                    
-                }
             }
         }
     }

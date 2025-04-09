@@ -49,7 +49,7 @@ page 50107 "AMM Libreria Card"
                     Boton: Codeunit "AMM Borrar Registros Movs";
                 begin
                     Message('%1',Rec);
-                    Boton.Run()
+                    Boton.BorrarRegistrosMovs(Rec);
                 end;
             }
             

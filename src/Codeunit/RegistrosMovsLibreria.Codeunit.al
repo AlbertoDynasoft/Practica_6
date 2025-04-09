@@ -1,20 +1,17 @@
 codeunit 50100 "AMM Registros Movs Libreria"
 {
-    /* EventSubscriberInstance = StaticAutomatic; */
     trigger OnRun()
     var
         RegistrosLA: Record "AMM Libros Asignados";
-        /* RegistrosLA2: Record "AMM Libros Asignados"; */
     begin
-        CrearRegistrosMovs(RegistrosLA/* ,RegistrosLA2 */);
+        CrearRegistrosMovs(RegistrosLA);
     end;
     [EventSubscriber(ObjectType::Table, Database::"AMM Libros Asignados", 'OnBeforeInsertEvent', '', true, true)]
-    local procedure CrearRegistrosMovs(var Rec: Record "AMM Libros Asignados"/* ; var xRec: Record  "AMM Libros Asignados" */)
+    local procedure CrearRegistrosMovs(var Rec: Record "AMM Libros Asignados")
     var
         RegistrosMovs: Record "AMM Movs Libreria";
         RegistrosLA2: Record "AMM Libros Asignados";
     begin
-        message('CREAR REGISTRO %1 %2',Rec.Cantidad,Rec.Cantidad);
         RegistrosMovs.IdLibreria := Rec.IdLibreria;
         RegistrosMovs.IdLibro := Rec.IdLibro;
         RegistrosMovs.Cantidad := Rec.Cantidad;
@@ -26,7 +23,6 @@ codeunit 50100 "AMM Registros Movs Libreria"
 
 codeunit 50103 "AMM Registros Movs Libreria 2"
 {
-    /* EventSubscriberInstance = StaticAutomatic; */
     trigger OnRun()
     var
         RegistrosLA: Record "AMM Libros Asignados";
@@ -40,7 +36,6 @@ codeunit 50103 "AMM Registros Movs Libreria 2"
         RegistrosMovs: Record "AMM Movs Libreria";
         RegistrosLA2: Record "AMM Libros Asignados";
     begin
-        message('CREAR REGISTRO %1 %2',Rec.Cantidad,xRec.Cantidad);
         RegistrosMovs.IdLibreria := Rec.IdLibreria;
         RegistrosMovs.IdLibro := Rec.IdLibro;
         RegistrosMovs.Cantidad := Rec.Cantidad-xRec.Cantidad;
