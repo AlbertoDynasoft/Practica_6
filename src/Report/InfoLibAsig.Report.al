@@ -5,16 +5,15 @@ report 50100 "AMM Info Libros Asignados"
     ApplicationArea = All;
     DefaultLayout = RDLC;
     RDLCLayout = 'InformeRDL.rdl';
-    
     dataset
     {
         dataitem("AMM Libros Asignados";"AMM Libros Asignados")
         {
-            column(IdLibreria;IdLibreria)
+            column(CodigoLibreria;CodigoLibreria)
             {
                 
             }
-            column(IdLibro;IdLibro)
+            column(CodigoLibro;CodigoLibro)
             {
                 
             }
@@ -28,46 +27,4 @@ report 50100 "AMM Info Libros Asignados"
             }
         }
     }
-    
-    /* requestpage
-    {
-        AboutTitle = 'Teaching tip title';
-        AboutText = 'Teaching tip content';
-        layout
-        {
-            area(Content)
-            {
-                group(GroupName)
-                {
-                    field(Name; SourceExpression)
-                    {
-                        
-                    }
-                }
-            }
-        }
-    
-        actions
-        {
-            area(processing)
-            {
-                action(LayoutName)
-                {
-                    
-                }
-            }
-        }
-    }
-    */
-    /* rendering
-    {
-        layout(LayoutName)
-        {
-            Type = Excel;
-            LayoutFile = 'mySpreadsheet.xlsx';
-        }
-    } */
-    /*
-    var
-        myInt: Integer; */
 }

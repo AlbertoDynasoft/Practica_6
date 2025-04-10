@@ -1,13 +1,12 @@
 table 50103 "AMM Libros"
 {
     DataClassification = ToBeClassified;
-    
     fields
     {
-        field(1; IdLibro; Integer)
+        field(1; CodigoLibro; Code[20])
         {
             DataClassification = ToBeClassified;
-            AutoIncrement = true;
+            /* AutoIncrement = true; */
         }
         field(2; Titulo; Text[60])
         {
@@ -30,10 +29,9 @@ table 50103 "AMM Libros"
             DataClassification = ToBeClassified;
         }
     }
-    
     keys
     {
-        key(PK; IdLibro)
+        key(PK; CodigoLibro)
         {
             Clustered = true;
         }
@@ -42,33 +40,4 @@ table 50103 "AMM Libros"
             
         }
     }
-    
-    /* fieldgroups
-    {
-        // Add changes to field groups here
-    }
-    
-    var
-        myInt: Integer;
-    
-    trigger OnInsert()
-    begin
-        
-    end;
-    
-    trigger OnModify()
-    begin
-        
-    end;
-    
-    trigger OnDelete()
-    begin
-        
-    end;
-    
-    trigger OnRename()
-    begin
-        
-    end; */
-    
 }

@@ -4,28 +4,24 @@ page 50103 "AMM Libros Card"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Libros";
-    /* Editable = true; */
-    
-
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            group("Datos Libros Card")
             {
                 Caption = 'Lista de Libros';
-                field(IdLibro;Rec.IdLibro)
+                field(CodigoLibro;Rec.CodigoLibro)
 				{
 					ApplicationArea = All;
-					Editable = false;
 				}
                 field(Titulo;Rec.Titulo)
                 {
-                    AccessByPermission = tabledata "AMM Libros" = R;
+                    /* AccessByPermission = tabledata "AMM Libros" = R; */
                 }
                 field(Descripcion;Rec.Descripcion)
                 {
-                    AccessByPermission = tabledata "AMM Libros" = R;
+                    /* AccessByPermission = tabledata "AMM Libros" = R; */
                 }
                 field(Autor;Rec.Autor)
                 {
@@ -37,27 +33,9 @@ page 50103 "AMM Libros Card"
                 }
                 field(Genero;Rec.Genero)
                 {
-                    AccessByPermission = tabledata "AMM Libros" = R;
+                    /* AccessByPermission = tabledata "AMM Libros" = R; */
                 }
             }
         }
     }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
-                    
-                end;
-            }
-        }
-    }
-    
-    var
-        myInt: Integer;
 }

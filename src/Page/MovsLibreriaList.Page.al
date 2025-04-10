@@ -4,7 +4,6 @@ page 50104 "AMM Movs Libreria List"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Movs Libreria";
-    /* Editable = false; */
     layout
     {
         area(Content)
@@ -15,11 +14,11 @@ page 50104 "AMM Movs Libreria List"
                 {
                     
                 }
-                field(IdLibro;Rec.IdLibro)
+                field(CodigoLibro;Rec.CodigoLibro)
                 {
                     
                 }
-                field(IdLibreria;Rec.IdLibreria)
+                field(CodigoLibreria;Rec.CodigoLibreria)
                 {
                     
                 }
@@ -29,42 +28,17 @@ page 50104 "AMM Movs Libreria List"
                 }
                 field(Estante;Rec.Estante)
                 {
-                    AccessByPermission = tabledata "AMM Movs Libreria" = RIMD;
+                    /* AccessByPermission = tabledata "AMM Movs Libreria" = RIMD; */
                 }
                 field(IdUsuario;Rec.IdUsuario)
                 {
                     
                 }
-            }
-            part(PartName; "AMM Movs Libreria SubPage")
-            {
-                ApplicationArea = Basic, Suite;
-                /* SubPageLink = "IdLibro" = field("IdLibro"); */
-            }
-        }
-    }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
+                field(FechaHora;Rec.FechaHora)
+                {
                     
-                end;
+                }
             }
         }
     }
-    trigger OnInit()
-    var
-        myInt: Integer;
-    begin
-        
-    end;
-    /*
-    var
-        myInt: Integer; */
 }

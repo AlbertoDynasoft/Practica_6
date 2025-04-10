@@ -4,58 +4,43 @@ page 50107 "AMM Libreria Card"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Librerias";
-    Editable = false;
-    
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            group("Datos Libreria Card")
             {
                 Caption = 'Lista de Librerias';
-                field(IdLibreria;Rec.IdLibreria)
+                field(CodigoLibreria;Rec.CodigoLibreria)
                 {
-                    Editable = false;
+
                 }
-                field(Codigo;Rec.Codigo)
-				{
-					ApplicationArea = All;
-					Editable = true;
-                    /* AccessByPermission = tabledata "AMM Librerias" = R; */ 
-				}
             }
             part("Apartado Libros Asignados"; "AMM Libros Asignados SubPage")
             {
                 ApplicationArea = Basic, Suite;
-                SubPageLink = IdLibreria = field("IdLibreria");
+                SubPageLink = CodigoLibreria = field("CodigoLibreria");
             }
             part("Apartado Movs Libreria"; "AMM Movs Libreria SubPage")
             {
                 ApplicationArea = Basic, Suite;
-                SubPageLink = IdLibreria = field("IdLibreria");
+                SubPageLink = CodigoLibreria = field("CodigoLibreria");
             }
         }
     }
-    
     actions
     {
         area(Processing)
         {
             action("Borrar Registros Movs")
             {
-                
                 trigger OnAction()
                 var
                     Boton: Codeunit "AMM Borrar Registros Movs";
                 begin
-                    Message('%1',Rec);
                     Boton.BorrarRegistrosMovs(Rec);
                 end;
             }
-            
         }
     }
-    
-    var
-        myInt: Integer;
 }

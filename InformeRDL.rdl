@@ -44,7 +44,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Id Libreria</Value>
+                                  <Value>Codigo Libreria</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -99,7 +99,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Id Libro</Value>
+                                  <Value>Codigo Libro</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -262,14 +262,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="IdLibreria">
+                        <Textbox Name="CodigoLibreria">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!IdLibreria.Value</Value>
+                                  <Value>=Fields!CodigoLibreria.Value</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -281,7 +281,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>IdLibreria</rd:DefaultName>
+                          <rd:DefaultName>CodigoLibreria</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -316,14 +316,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="IdLibro">
+                        <Textbox Name="CodigoLibro">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!IdLibro.Value</Value>
+                                  <Value>=Fields!CodigoLibro.Value</Value>
                                   <Style>
                                     <FontSize>12pt</FontSize>
                                   </Style>
@@ -334,7 +334,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>IdLibro</rd:DefaultName>
+                          <rd:DefaultName>CodigoLibro</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -611,11 +611,11 @@ End Function
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
-        <Field Name="IdLibreria">
-          <DataField>IdLibreria</DataField>
+        <Field Name="CodigoLibreria">
+          <DataField>CodigoLibreria</DataField>
         </Field>
-        <Field Name="IdLibro">
-          <DataField>IdLibro</DataField>
+        <Field Name="CodigoLibro">
+          <DataField>CodigoLibro</DataField>
         </Field>
         <Field Name="Cantidad">
           <DataField>Cantidad</DataField>

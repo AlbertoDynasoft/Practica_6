@@ -1,7 +1,6 @@
 table 50105 "AMM Movs Libreria"
 {
     DataClassification = ToBeClassified;
-    
     fields
     {
         field(1; IdMovsLibreria; Integer)
@@ -9,15 +8,15 @@ table 50105 "AMM Movs Libreria"
             DataClassification = ToBeClassified; 
             AutoIncrement = true;
         }
-        field(2; IdLibro; Integer)
+        field(2; CodigoLibro; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "AMM Libros".IdLibro;
+            TableRelation = "AMM Libros".CodigoLibro;
         }
-        field(3; IdLibreria; Integer)
+        field(3; CodigoLibreria; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "AMM Librerias".IdLibreria;
+            TableRelation = "AMM Librerias".CodigoLibreria;
         }
         field(4; Cantidad; Integer)
         {
@@ -32,43 +31,19 @@ table 50105 "AMM Movs Libreria"
         {
             DataClassification = ToBeClassified;
         }
+        field(7; FechaHora; DateTime)
+        {
+            DataClassification = ToBeClassified;
+        }
     }
-    
     keys
     {
-        key(PK; IdMovsLibreria, IdLibro, IdLibreria, Estante)
+        key(PK; IdMovsLibreria, CodigoLibro, CodigoLibreria, Estante)
         {
             Clustered = true;
         }
     }
     
-    /* fieldgroups
-    {
-        // Add changes to field groups here
-    }
-    
-    var
-        myInt: Integer;
-    
-    trigger OnInsert()
-    begin
-        
-    end;
-    
-    trigger OnModify()
-    begin
-        
-    end;
-    
-    trigger OnDelete()
-    begin
-        
-    end;
-    
-    trigger OnRename()
-    begin
-        
-    end; */
     /* trigger On()
     begin
         if UserHasPermission('User1', 'MyPermissionSet') then begin

@@ -4,19 +4,18 @@ page 50110 "AMM Libros Asignados Card"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Libros Asignados";
-    
     layout
     {
         area(Content)
         {
-            group(GroupName)
+            group("Datos Libros Asignados")
             {
                 Caption = 'Lista de Libros Asignados';
-                field(IdLibreria;Rec.IdLibreria)
+                field(CodigoLibreria;Rec.CodigoLibreria)
                 {
                     
                 }
-                field(IdLibro;Rec.IdLibro)
+                field(CodigoLibro;Rec.CodigoLibro)
                 {
                     
                 }
@@ -31,24 +30,4 @@ page 50110 "AMM Libros Asignados Card"
             }
         }
     }
-    
-    
-
-    /* actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
-                    
-                end;
-            }
-        }
-    } */
-    
-    var
-        myInt: Integer;
 }

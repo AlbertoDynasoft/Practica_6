@@ -8,13 +8,13 @@ page 50108 "AMM Libros Asignados SubPage"
     {
         area(Content)
         {
-            repeater(GroupName)
+            repeater("Datos Libros Asignados Subpage")
             {
-                field(IdLibreria;Rec.IdLibreria)
+                field(CodigoLibreria;Rec.CodigoLibreria)
                 {
                     
                 }
-                field(IdLibro;Rec.IdLibro)
+                field(CodigoLibro;Rec.CodigoLibro)
                 {
                     
                 }

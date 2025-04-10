@@ -4,16 +4,14 @@ page 50102 "AMM Libros List"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Libros";
-    Editable = false;
     CardPageId = "AMM Libros Card";
-    
     layout
     {
         area(Content)
         {
             repeater(Libros)
             {
-                field(IdLibro;Rec.IdLibro)
+                field(CodigoLibro;Rec.CodigoLibro)
                 {
                     
                 }
@@ -40,22 +38,4 @@ page 50102 "AMM Libros List"
             }
         }
     }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
-                    
-                end;
-            }
-        }
-    }
-    
-    var
-        myInt: Integer;
 }

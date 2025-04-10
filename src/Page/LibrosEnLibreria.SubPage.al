@@ -4,23 +4,23 @@ page 50105 "AMM Movs Libreria SubPage"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Movs Libreria";
-    Editable = false;
     
     layout
     {
+        
         area(Content)
         {
-            repeater(GroupName)
+            field(CodigoLibreria;Rec.CodigoLibreria)
+            {
+                
+            }
+            repeater("Datos Movs Libreria Subpage")
             {
                 field(IdMovsLibreria;Rec.IdMovsLibreria)
                 {
                     
                 }
-                field(IdLibro;Rec.IdLibro)
-                {
-                    
-                }
-                field(IdLibreria;Rec.IdLibreria)
+                field(CodigoLibro;Rec.CodigoLibro)
                 {
                     
                 }
@@ -32,25 +32,15 @@ page 50105 "AMM Movs Libreria SubPage"
                 {
                     
                 }
-            }
-        }
-    }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
+                field(IdUsuario;Rec.IdUsuario)
+                {
                     
-                end;
+                }
+                field(FechaHora;Rec.FechaHora)
+                {
+                    
+                }
             }
         }
     }
-    
-    var
-        myInt: Integer;
 }

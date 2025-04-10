@@ -4,20 +4,14 @@ page 50106 "AMM Libreria List"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Librerias";
-    Editable = false;
     CardPageId = "AMM Libreria Card";
-    
     layout
     {
         area(Content)
         {
-            repeater(Librerias)
+            repeater("Datos Librerias List")
             {
-                field(IdLibreria;Rec.IdLibreria)
-                {
-                    
-                }
-                field(Codigo;Rec.Codigo)
+                field(CodigoLibreria;Rec.CodigoLibreria)
                 {
                     
                 }
@@ -32,22 +26,6 @@ page 50106 "AMM Libreria List"
             }
         }
     }
-    
-    actions
-    {
-        area(Processing)
-        {
-            action(ActionName)
-            {
-                
-                trigger OnAction()
-                begin
-                    
-                end;
-            }
-        }
-    }
-
     local procedure ObtenerNumeroLibros() : Integer
     var
         Libros: Record "AMM Libros";
@@ -60,5 +38,4 @@ page 50106 "AMM Libreria List"
             until Libros.next <= 0;
         exit(Contador);
     end;
-    
 }

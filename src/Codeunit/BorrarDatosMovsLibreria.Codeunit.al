@@ -4,7 +4,7 @@ codeunit 50102 "AMM Borrar Registros Movs"
     var
         RegistrosMovs: Record "AMM Movs Libreria";
     begin
-        RegistrosMovs.SetRange(IdLibreria,rec.IdLibreria);
+        RegistrosMovs.SetRange(CodigoLibreria,rec.CodigoLibreria);
         if RegistrosMovs.FindSet() then begin
             repeat
                 RegistrosMovs.Delete()
