@@ -10,6 +10,8 @@ report 50101 "AMM Info Movs Libreria"
     {
         dataitem("AMM Movs Libreria";"AMM Movs Libreria")
         {
+            DataItemTableView = sorting("CodigoLibro") order(ascending);
+            RequestFilterFields = CodigoLibreria;
             column(CodigoLibreria;CodigoLibreria)
             {
                 
@@ -22,11 +24,19 @@ report 50101 "AMM Info Movs Libreria"
             {
                 
             }
+            column(CalcularTotal;CalcularTotal(Cantidad))
+            {
+                
+            }
+            
         }
     }
+
+    
     
     /* requestpage
     {
+        
         AboutTitle = 'Teaching tip title';
         AboutText = 'Teaching tip content';
         layout
@@ -35,10 +45,7 @@ report 50101 "AMM Info Movs Libreria"
             {
                 group(GroupName)
                 {
-                    field(Name; SourceExpression)
-                    {
-                        
-                    }
+                    
                 }
             }
         }
@@ -54,7 +61,13 @@ report 50101 "AMM Info Movs Libreria"
             }
         }
     } */
-    
+    local procedure CalcularTotal(var Cantidad: Integer) : Integer
+    var
+        total: Integer;
+    begin
+        total := Cantidad;
+        exit(total);
+    end;
     /* rendering
     {
         layout(LayoutName)
