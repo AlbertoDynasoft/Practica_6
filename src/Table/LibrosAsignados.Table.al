@@ -1,4 +1,4 @@
-table 50106 "AMM Libros Asignados"
+table 50132 "AMM Libros Asignados"
 {
     DataClassification = ToBeClassified;
     fields
@@ -23,15 +23,12 @@ table 50106 "AMM Libros Asignados"
             begin
                 Libros.SetRange(CodigoLibro, Rec.CodigoLibro);
                 Librerias.SetRange(CodigoLibreria, Rec.CodigoLibreria);
-
-                if Rec.Cantidad <> xRec.Cantidad then begin
-                    if Libros.FindSet() and Librerias.FindSet() then begin
+                if Rec.Cantidad <> xRec.Cantidad then
+                    if Libros.FindFirst() and Librerias.FindFirst() then
                         if Confirm('¿Seguro que desea modificar la cantidad del libro "%1" en la librería "%2"?', false, Libros.Titulo, Librerias.CodigoLibreria) then
                             Rec.Cantidad := Rec.Cantidad
                         else
                             Rec.Cantidad := xRec.Cantidad;
-                    end;
-                end;
             end;
         }
         field(4; Estante; Integer)

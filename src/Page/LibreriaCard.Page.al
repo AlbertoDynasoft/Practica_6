@@ -1,4 +1,4 @@
-page 50107 "AMM Libreria Card"
+page 50135 "AMM Libreria Card"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -13,7 +13,11 @@ page 50107 "AMM Libreria Card"
                 Caption = 'Lista de Librerias';
                 field(CodigoLibreria;Rec.CodigoLibreria)
                 {
-
+                    ToolTip = 'Especifica el código de la libreria';
+                }
+                field(Test;Rec.Test)
+                {
+                    ToolTip = 'Especifica el test';
                 }
             }
             part("Apartado Libros Asignados"; "AMM Libros Asignados SubPage")
@@ -34,6 +38,7 @@ page 50107 "AMM Libreria Card"
         {
             action("Borrar Registros Movs")
             {
+                ToolTip = 'Botón que borra los registros de Movs libreria que sean de la libreria actual';
                 trigger OnAction()
                 var
                     Boton: Codeunit "AMM Borrar Registros Movs";

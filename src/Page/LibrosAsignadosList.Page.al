@@ -1,11 +1,9 @@
-page 50109 "AMM Libros Asignados List"
+page 50136 "AMM Libros Asignados List"
 {
     PageType = List;
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "AMM Libros Asignados";
-    /* CardPageId = "AMM Libros Asignados Card"; */
-    
     layout
     {
         area(Content)
@@ -14,19 +12,19 @@ page 50109 "AMM Libros Asignados List"
             {
                 field(CodigoLibreria;Rec.CodigoLibreria)
                 {
-                    
+                    ToolTip = 'Especifica el código de la libreria relacionada';
                 }
                 field(CodigoLibro;Rec.CodigoLibro)
                 {
-                    
+                    ToolTip = 'Especifica el código del libro relacionado';
                 }
                 field(Cantidad;Rec.Cantidad)
                 {
-                    
+                    ToolTip = 'Especifica la cantidad del registro de libros asignados';
                 }
                 field(Estante;Rec.Estante)
                 {
-                    
+                    ToolTip = 'Especifica el estante del registro de libros asignados';
                 }
             }
             part("Apartado Movs Libreria"; "AMM Movs Libreria SubPage")

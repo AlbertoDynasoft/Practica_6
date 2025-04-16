@@ -1,51 +1,39 @@
-pageextension 50102 "Pila" extends "SO Processor Activities"
+pageextension 50130 "Pila" extends "SO Processor Activities"
 {
     layout
     {
         addfirst(content)
         {
-
-        }
-    }
-    
-    actions
-    {
-        addlast(processing)
-        {
-            group(grupo1)
+            cuegroup("Registros Movs Libreria")
             {
-                action("Pedidos de Venta")
+                field(Entradas;Rec.Entradas)
                 {
-                    RunObject = page "Sales Order List";
+                    Caption = 'Entradas Movs Libreria';
                     ApplicationArea = All;
+                    ToolTip = 'Pila que cuenta los registros de Movs Libreria';
+                    DrillDownPageId = "AMM Movs Libreria List";
                 }
-                action("Facturas de Venta")
+                field("EntradasMayor20";this.EntradasMayorQue20())
                 {
-                    RunObject = page "Posted Sales Invoices";
+                    Caption = 'Entradas Movs Libreria';
                     ApplicationArea = All;
-                }
-                action("Clientes")
-                {
-                    RunObject = page "Customer List";
-                    ApplicationArea = All;
-                }
-                group("Configuración")
-                {
-                    action("Métodos de Pago")
-                    {
-                        RunObject = page "Payment Methods";
-                        ApplicationArea = All;
-                    }
-                    action("Condiciones de Pago")
-                    {
-                        RunObject = page "Payment Terms";
-                        ApplicationArea = All;
-                    }
+                    ToolTip = 'Pila que cuenta los registros de Movs Libreria con cantidad superior a 20';
+                    DrillDownPageId = "AMM Movs Libreria List";
                 }
             }
         }
     }
-    
+    local procedure EntradasMayorQue20() : Integer
     var
-        myInt: Integer;
+        MovsLibreria: Record "AMM Movs Libreria";
+        ContadorEntradas: Integer;
+    begin
+        ContadorEntradas := 0;
+        MovsLibreria.SetFilter("Cantidad", '>20');
+        if MovsLibreria.FindSet() then
+            repeat
+                ContadorEntradas := ContadorEntradas + 1;
+            until MovsLibreria.next() <= 0;
+        exit(ContadorEntradas)
+    end;
 }

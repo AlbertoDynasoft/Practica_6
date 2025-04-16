@@ -1,10 +1,10 @@
-report 50100 "AMM Info Libros Asignados"
+report 50130 "AMM Info Libros Asignados"
 {
     Caption = 'Report Libros Asignados';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = 'InformeRDL.rdl';
+    RDLCLayout = 'layout/InformeRDL.rdl';
     dataset
     {
         dataitem("AMM Libros Asignados";"AMM Libros Asignados")

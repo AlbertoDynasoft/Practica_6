@@ -12,5 +12,7 @@ permissionset 50141 "AMM Administrador"
         tabledata "AMM Movs Libreria" = RIMD,
         tabledata "AMM Libros" = RIMD,
         tabledata "AMM Librerias" = RIMD,
-        tabledata "AMM Libros Asignados" = RIMD;
+        tabledata "AMM Libros Asignados" = RIMD,
+        tabledata "AMM Test Cambiado" = RIMD;/* ,
+        tabledata "AMM Pila Movs Libreria" = RIMD; */
 }

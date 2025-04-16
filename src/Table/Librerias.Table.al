@@ -1,4 +1,4 @@
-table 50104 "AMM Librerias"
+table 50131 "AMM Librerias"
 {
     DataClassification = ToBeClassified;
     fields
@@ -6,7 +6,7 @@ table 50104 "AMM Librerias"
         field(1; CodigoLibreria; Code[20])
         {
             DataClassification = ToBeClassified;
-            
+            Editable = true;
         }
         field(2; Test; Code[10])
         {

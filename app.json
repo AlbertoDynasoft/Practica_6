@@ -1,7 +1,7 @@
 {
   "id": "f4fe1b1e-af52-42f1-a53f-f2b333dc8665",
   "name": "Practica6",
-  "publisher": "Practica6Pub",
+  "publisher": "AMM",
   "version": "1.0.0.0",
   "brief": "",
   "description": "",
@@ -16,7 +16,7 @@
   "application": "25.0.0.0",
   "idRanges": [
     {
-      "from": 50100,
+      "from": 50130,
       "to": 50149
     }
   ],

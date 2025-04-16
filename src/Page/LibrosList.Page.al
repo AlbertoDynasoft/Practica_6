@@ -1,4 +1,4 @@
-page 50102 "AMM Libros List"
+page 50130 "AMM Libros List"
 {
     PageType = List;
     ApplicationArea = All;
@@ -13,27 +13,27 @@ page 50102 "AMM Libros List"
             {
                 field(CodigoLibro;Rec.CodigoLibro)
                 {
-                    
+                    ToolTip = 'Especifica el código del libro';
                 }
                 field(Titulo;Rec.Titulo)
                 {
-                    
+                    ToolTip = 'Especifica el titulo del libro';
                 }
                 field(Descripcion;Rec.Descripcion)
                 {
-                    
+                    ToolTip = 'Especificala descripción del libro';
                 }
                 field(Autor;Rec.Autor)
                 {
-                    
+                    ToolTip = 'Especifica el autor del libro';
                 }
                 field(Editorial;Rec.Editorial)
                 {
-                    
+                    ToolTip = 'Especifica la editorial del libro';
                 }
                 field(Genero;Rec.Genero)
                 {
-                    
+                    ToolTip = 'Especifica el género del libro';
                 }
             }
         }

@@ -1,4 +1,4 @@
-table 50103 "AMM Libros"
+table 50130 "AMM Libros"
 {
     DataClassification = ToBeClassified;
     fields

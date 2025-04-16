@@ -1,4 +1,4 @@
-table 50107 "AMM Test Cambiado"
+table 50134 "AMM Test Cambiado"
 {
     DataClassification = ToBeClassified;
     fields

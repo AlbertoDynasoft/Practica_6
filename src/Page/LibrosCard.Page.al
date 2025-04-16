@@ -1,4 +1,4 @@
-page 50103 "AMM Libros Card"
+page 50131 "AMM Libros Card"
 {
     PageType = Card;
     ApplicationArea = All;
@@ -14,26 +14,27 @@ page 50103 "AMM Libros Card"
                 field(CodigoLibro;Rec.CodigoLibro)
 				{
 					ApplicationArea = All;
+                    ToolTip = 'Especifica el código del libro';
 				}
                 field(Titulo;Rec.Titulo)
                 {
-                    /* AccessByPermission = tabledata "AMM Libros" = R; */
+                    ToolTip = 'Especifica el titulo del libro';
                 }
                 field(Descripcion;Rec.Descripcion)
                 {
-                    /* AccessByPermission = tabledata "AMM Libros" = R; */
+                    ToolTip = 'Especifica la descripción del libro';
                 }
                 field(Autor;Rec.Autor)
                 {
-                    
+                    ToolTip = 'Especifica el autor del libro';
                 }
                 field(Editorial;Rec.Editorial)
                 {
-                    
+                    ToolTip = 'Especifica la editorial del libro';
                 }
                 field(Genero;Rec.Genero)
                 {
-                    /* AccessByPermission = tabledata "AMM Libros" = R; */
+                    ToolTip = 'Especifica el género del libro';
                 }
             }
         }

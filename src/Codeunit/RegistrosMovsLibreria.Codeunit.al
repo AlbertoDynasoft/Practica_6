@@ -1,4 +1,4 @@
-codeunit 50100 "AMM Registros Movs Libreria"
+codeunit 50130 "AMM Registros Movs Libreria"
 {
     trigger OnRun()
     var
@@ -7,14 +7,14 @@ codeunit 50100 "AMM Registros Movs Libreria"
     begin
         CrearRegistrosMovs(RegistrosLA,RegistrosLA2);
     end;
-    [EventSubscriber(ObjectType::Table, Database::"AMM Libros Asignados", /* 'OnBeforeModifyEvent' */'OnBeforeValidateEvent', 'Cantidad', true, true)]
+    [EventSubscriber(ObjectType::Table, Database::"AMM Libros Asignados",'OnBeforeValidateEvent', 'Cantidad', true, true)]
     local procedure CrearRegistrosMovs(var Rec: Record "AMM Libros Asignados"; var xRec: Record  "AMM Libros Asignados")
     var
         RegistrosMovs: Record "AMM Movs Libreria";
     begin
         RegistrosMovs.CodigoLibreria := Rec.CodigoLibreria;
         RegistrosMovs.CodigoLibro := Rec.CodigoLibro;
-        RegistrosMovs.Cantidad := Rec.Cantidad-xRec.Cantidad;
+        RegistrosMovs.Cantidad := Rec.Cantidad - xRec.Cantidad;
         RegistrosMovs.Estante := Rec.Estante;
         RegistrosMovs.IdUsuario := UserSecurityId();
         RegistrosMovs.FechaHora := CurrentDateTime();
